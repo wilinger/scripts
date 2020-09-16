@@ -13,14 +13,14 @@ fi
 # Set Internet eth port
 eth_port=eth9
 
-# Set Pihole IP
+# Set Pihole server IP
 pihole_ip=10.10.50.50
 
 runcfg=/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper
 runop=/opt/vyatta/bin/vyatta-op-cmd-wrapper
 
 pihole() {  
-  echo "Switching to DNS to Pihole..."
+  echo "Switching to Pihole DNS..."
   $runcfg begin
   $runcfg set interfaces ethernet $eth_port dhcp-options name-server no-update
   $runcfg delete system name-server
