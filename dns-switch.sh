@@ -2,11 +2,13 @@
 # Script to switch DNS forwaring between Pihole and ISP on Edgerouter
 
 if [[ ! "$1" =~ ^(show|pihole|isp)$ ]]; then
-  echo "Usage: `basename $0` [pihole|isp|show]"
-  echo "Options:"
-  echo "pihole - switch DNS forwarding to Pihole"
-  echo "isp - switch DNS forwarding to ISP"
-  echo "show - show DNS forwarding nameservers"
+  echo "Usage: `basename $0` [pihole|isp|show]
+  
+  Options:
+   pihole - switch DNS forwarding to Pihole
+   isp - switch DNS forwarding to ISP
+   show - show DNS forwarding nameservers
+  "
   exit 0
 fi
 
